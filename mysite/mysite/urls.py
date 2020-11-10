@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from gratitude_feed.views import gratitude_feed
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', gratitude_feed),
 ]
