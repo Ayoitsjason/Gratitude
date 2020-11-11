@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from gratitude_feed.views import gratitude_feed
+from register_login_logout.views import register
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', gratitude_feed),
+    path('', register),
+    path('home', gratitude_feed),
 ]

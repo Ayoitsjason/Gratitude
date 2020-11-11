@@ -1,3 +1,5 @@
+{% load static %}
+
 <!doctype html>
 
 <html lang="en">
@@ -7,11 +9,20 @@
   <title>Gratitude</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
 
 </head>
 
 <body>
-  <h1 style="text-align: center">What are you grateful for?</h1>
-  {% block content %} {% endblock %}
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-8">
+        <h1 class="mt-2">What are you grateful for?</h1>
+        <hr class="mt-0 mb-4">
+        {% block content %}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
 </body>
 </html>

@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class = "form_wrapper">
+    <form action="home" method="POST">
+        {% csrf_token %}
+        <input value="username"> Username </input>
+        <input value="password"> Password </input>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+{% endblock %}
