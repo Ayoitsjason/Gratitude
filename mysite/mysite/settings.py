@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crispy_forms',
     'gratitude_feed',
+    'register_login_logout',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
