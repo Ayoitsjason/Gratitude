@@ -1,4 +1,4 @@
-"""mysite URL Configuration
+"""gratitude URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -15,13 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from gratitude_feed.views import gratitude_feed
-from register_login_logout.views import splash
-from register_login_logout.views import register
+
+from .views import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', splash),
-    path('register', register),
-    path('home', gratitude_feed),
+    path('/home', name='home')
 ]
